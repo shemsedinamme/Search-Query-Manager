@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Protocol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="protocol_styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <style>
+        .protocolEditContainer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .protocolEditContainer h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sectionList, .commentsSection, .versionHistory {
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .sectionItem, .comment {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .commentInput {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .addButton, .saveButton {
+            padding: 8px 12px;
+            background-color: MediumSeaGreen;
+            color: lemonchiffon;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .addButton:hover, .saveButton:hover {
+            background-color: #253725;
+        }
+
+        .versionHistory li {
+            padding: 10px;
+        }
+
+        .protocolForm {
+            margin-bottom: 20px;
+        }
+
+        .protocolInput, .templateSelect, .reviewTypeSelect {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 100%; /* Make inputs full width */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="protocolEditContainer">
+        <h1>Edit Protocol: <span id="protocolTitle">Loading...</span></h1>
+
+        <div class="protocolForm">
+            <form id="protocolForm" method="POST" action="/protocol/edit">
+                <label for="protocol_title">Protocol Title:</label>
+                <input type="text" id="protocol_title" name="protocol_title" required />
+
+                <label for="protocol_summary">Summary:</label>
+                <textarea id="protocol_summary" name="protocol_summary" rows="4" required></textarea>
+
+                <label for="protocol_type">Review Type:</label>
+                <select id="protocol_type" name="protocol_type" class="reviewTypeSelect">
+                    <option value="scoping">Scoping Review</option>
+                    <option value="systematic">Systematic Review</option>
+                    <option value="meta_analysis">Meta-Analysis</option>
+                    <option value="qualitative">Qualitative Review</option>
+                    <option value="mixed_review">Mixed Methods Review</option>
+                    <option value="other_review">Other Review</option>
+                </select>
+
+                <button type="button" id="saveProtocol" class="saveButton">Save Changes</button>
+            </form>
+        </div>
+
+        <div class="sectionList" id="sectionList"></div>
+        <div class="commentsSection">
+            <h2>Comments</h2>
+            <div class="commentsList" id="commentsList"></div>
+            <div class="addComment">
+                <input type="text" id="newComment" placeholder="Add a comment" class="commentInput" />
+                <button id="addComment" class="addButton">Add Comment</button>
+            </div>
+        </div>
+        <div class="versionHistory">
+            <h2>Version History</h2>
+            <ul id="versionHistoryList"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 ARMS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/ProtocolEdit.js"></script>
+</body>
+
+</html>

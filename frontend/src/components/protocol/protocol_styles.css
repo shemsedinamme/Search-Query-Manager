@@ -1,0 +1,639 @@
+
+
+/* ProtocolTemplate.module.css */
+
+
+/* ProjectShare.module.css */
+.shareContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.shareContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shareForm, .shareLink {
+  display: flex;
+    margin-bottom: 10px;
+}
+
+.shareInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.shareInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.accessSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.accessSelect:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.shareButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.shareButton:hover {
+    background-color: #253725;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+    margin-top:10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .shareContainer {
+    padding: 15px;
+  }
+}
+.templateContainer {
+
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.templateContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.templateList{
+   border: 1px solid #eee;
+   padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.templateItem{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.templateItem span{
+  font-size: 16px;
+  font-weight: bold;
+}
+.selectButton{
+ padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.selectButton:hover {
+    background-color: #253725;
+}
+.shareButton {
+    padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+
+.shareButton:hover {
+   background-color: #253725;
+}
+.newTemplate{
+     border: 1px solid #eee;
+   padding: 10px;
+    border-radius: 4px;
+}
+.newTemplate input,
+.newTemplate textarea{
+    width: 100%;
+     padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+   box-sizing: border-box;
+     margin-bottom: 10px;
+}
+.newTemplate input:focus,
+.newTemplate textarea:focus{
+    border-color: MediumSeaGreen;
+}
+.addSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.addSection input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.addSection input:focus{
+    border-color: MediumSeaGreen
+}
+.addDataField{
+      margin-bottom: 10px;
+}
+.addDataField input{
+     width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.addDataField input:focus{
+    border-color: MediumSeaGreen;
+}
+.dataFieldList{
+    border: 1px solid #eee;
+     padding: 5px;
+     margin-bottom: 5px;
+}
+.dataFieldList li{
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+.createButton{
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.createButton:hover{
+   background-color: #253725;
+}
+.deleteButton{
+ padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+       margin-left: 10px;
+}
+.deleteButton:hover {
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .templateContainer {
+    padding: 15px;
+  }
+}
+
+/* ProtocolCreate.module.css */
+.protocolCreateContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.protocolCreateContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.protocolForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.protocolInput{
+    flex: 1;
+      padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     margin-right: 10px;
+}
+.protocolInput:focus {
+  border-color: MediumSeaGreen;
+}
+.templateSelect{
+     padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.templateSelect:focus{
+  border-color: MediumSeaGreen;
+}
+.sectionList{
+  padding: 10px;
+  border: 1px solid #eee;
+   border-radius: 4px;
+    margin-bottom: 10px;
+}
+.sectionItem {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.sectionItem h2{
+  margin-bottom: 10px;
+}
+.createButton {
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.createButton:hover {
+     background-color: #253725;
+}
+.saveButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.saveButton:hover {
+     background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .protocolCreateContainer {
+        padding: 15px;
+    }
+}
+
+.protocolEditContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.protocolEditContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sectionList, .commentsSection, .versionHistory {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.sectionItem, .comment {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.commentInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.addButton, .saveButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.addButton:hover, .saveButton:hover {
+    background-color: #253725;
+}
+
+.versionHistory li {
+    padding: 10px;
+}
+
+.reviewContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reviewContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.assignReviewer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.selectInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.selectInput:focus {
+    border-color: MediumSeaGreen;
+}
+
+.assignButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.assignButton:hover {
+    background-color: #253725;
+}
+
+.reviewList {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.reviewItem {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviewItem h3 {
+    margin-bottom: 10px;
+}
+
+.commentAction {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.commentInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.commentInput:focus {
+    border-color: MediumSeaGreen;
+}
+
+.commentButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.commentButton:hover {
+    background-color: #253725;
+}
+
+.approvalSection {
+    margin-bottom: 10px;
+}
+
+.approvalSection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.approveButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.approveButton:hover {
+    background-color: #253725;
+}
+
+@media (max-width: 768px) {
+    .reviewContainer {
+        padding: 15px;
+    }
+}
+
+
+/* ProtocolVersion.module.css */
+
+.versionContainer {
+
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.versionContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.versionList ul{
+  list-style: none;
+  padding: 0;
+}
+.versionItem{
+  padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.viewButton{
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.viewButton:hover {
+   background-color: #253725;
+}
+
+.revertButton {
+   padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.revertButton:hover{
+   background-color: #253725;
+}
+.versionContent {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .versionContainer {
+        padding: 15px;
+    }
+}
+
+
+
+/* ProjectShare.module.css */
+.shareContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.shareContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shareForm, .shareLink {
+  display: flex;
+    margin-bottom: 10px;
+}
+
+.shareInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.shareInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.accessSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.accessSelect:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.shareButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.shareButton:hover {
+    background-color: #253725;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+    margin-top:10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .shareContainer {
+    padding: 15px;
+  }
+}
