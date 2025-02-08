@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Sharing</title>
+    <link rel="stylesheet" href="protocol_styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <style>
+      
+      
+
+/* ProjectShare.module.css */
+.shareContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.shareContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shareForm, .shareLink {
+  display: flex;
+    margin-bottom: 10px;
+}
+
+.shareInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.shareInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.accessSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.accessSelect:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.shareButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.shareButton:hover {
+    background-color: #253725;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+    margin-top:10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .shareContainer {
+    padding: 15px;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="shareContainer">
+        <h1>Protocol Sharing</h1>
+        <div id="protocolShareContent">
+            <div class="shareForm">
+                <input type="text" id="shareWith" placeholder="Share with user (email or username)" class="shareInput" required />
+                <select id="accessType" class="accessSelect">
+                    <option value="read-only">Read Only</option>
+                    <option value="read-write">Read Write</option>
+                </select>
+                <button id="shareButton" class="shareButton">Share Protocol</button>
+            </div>
+            <div class="shareLink">
+                <input type="password" id="password" placeholder="Enter password for share link" class="shareInput" required />
+                <button id="generateShareLinkButton" class="shareButton">Generate Share Link</button>
+                <p id="shareLinkMessage"></p>
+            </div>
+            <button id="fetchShareLinkButton" class="shareButton" style="margin: 10px 0;">Fetch Share Link</button>
+            <p id="notificationMessage" class="message"></p>
+        </div>
+        <p id="noprotocolMessage" style="display: none;">Select a protocol to manage protocol sharing.</p>
+    </div>
+
+    <script src="js/protocolShare.js"></script>
+</body>
+</html>

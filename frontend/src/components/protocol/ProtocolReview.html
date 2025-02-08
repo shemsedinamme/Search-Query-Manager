@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protocol Review</title>
+    <link rel="stylesheet" href="ProtocolReview.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      /* ProtocolReview.module.css */
+.reviewContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.reviewContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.assignReviewer{
+ display: flex;
+  align-items: center;
+     margin-bottom: 10px;
+}
+.selectInput{
+    padding: 8px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.selectInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.assignButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.assignButton:hover {
+     background-color: #253725;
+}
+.reviewList {
+  margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-y: auto;
+  max-height: 300px;
+}
+.reviewItem{
+     padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.reviewItem h3{
+    margin-bottom: 10px;
+}
+.commentAction {
+  display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.commentInput {
+ flex:1;
+    padding: 8px;
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.commentInput:focus {
+ border-color: MediumSeaGreen;
+}
+.commentButton {
+   padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.commentButton:hover {
+     background-color: #253725;
+}
+.approvalSection {
+    margin-bottom: 10px;
+}
+.approvalSection ul{
+    list-style: none;
+    padding: 0;
+}
+.approveButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.approveButton:hover {
+   background-color: #253725;
+}
+
+@media (max-width: 768px) {
+  .reviewContainer {
+    padding: 15px;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <div class="reviewContainer">
+        <h1>Protocol Review and Approval</h1>
+        <div class="assignReviewer">
+            <select id="sectionSelect" class="selectInput">
+                <option value="" disabled selected>Select a section to assign reviewer</option>
+            </select>
+            <select id="reviewerSelect" class="selectInput">
+                <option value="" disabled selected>Select a Reviewer</option>
+            </select>
+            <button id="assignReviewer" class="assignButton">Assign Reviewer</button>
+        </div>
+        <div class="reviewList" id="reviewList"></div>
+        <div class="approvalSection">
+            <h2>Approval History:</h2>
+            <ul id="approvalHistoryList"></ul>
+            <button id="approveProtocol" class="approveButton">Approve Protocol</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 ARMS. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/ProtocolReview.js"></script>
+</body>
+
+</html>
