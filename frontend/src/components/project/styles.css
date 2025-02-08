@@ -1,0 +1,1189 @@
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+        margin: 0;
+        background-color: #f4f4f4;
+    }
+
+    /* Global */
+    .container {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    a {
+        cursor: pointer;
+        color: steelblue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: red;
+        text-decoration: underline;
+    }
+
+    nav, section, article {
+        margin: 5px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 20px;
+        font-size: 1.5em;
+    }
+  nav ul li a{
+        display: inline;
+        padding: 30px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+        min-height: 70px;
+        padding-bottom: 20px;
+    }
+
+
+    ul .highlight,
+    ul .current li{
+        color: lemonchiffon;
+        font-weight: bold;
+    }
+    header {
+        background-color: MediumSeaGreen;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        min-height: 70px;
+        border-bottom: lemonchiffon 3px solid;
+    }
+
+    #headerDescription {
+        margin: 5px;
+        padding: 8px;
+        margin-top: 0;
+        color: white;
+        font-size: 2.5em;
+    }
+
+    header a {
+        color: white;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    header li {
+        float: left;
+        display: inline;
+        padding: 0 20px;
+    }
+
+    header #branding {
+        float: left;
+    }
+
+    header #branding h1 {
+        margin: 0;
+    }
+
+    header nav {
+        float: right;
+        margin-top: 10px;
+    }
+
+    header .highlight,
+    header .current a {
+        color: lemonchiffon;
+        font-weight: bold;
+    }
+
+    header a:hover {
+        color: lemonchiffon;
+        font-weight: bold;
+    }
+
+    #content {
+        margin: 0 5px;
+        text-align: justify;
+    }
+
+    .dashboardHeader {
+        background-color: whitesmoke;
+        color: midnightblue;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+
+    .dashboardHeader h1 {
+        margin: 0;
+    }
+
+    .adminTaskbar {
+        background-color: whitesmoke;
+        padding: 15px;
+        width: 200px;
+        float: left;
+        height: calc(20vh - 80px);
+        overflow-y: auto;
+    }
+
+    .adminTaskbar h2 {
+        font-size: 1.2em;
+    }
+
+    .adminTaskbar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .adminTaskbar ul li {
+        margin: 10px 0;
+    }
+
+    .adminTaskbar ul li a {
+        color: #007acc;
+    }
+
+    .adminTaskbar ul li a:hover {
+        text-decoration: underline;
+        color: whitesmoke;
+    }
+
+    .dashboardGrid {
+        margin-left: 220px; /* Leave space for sidebar */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboardSection {
+        background-color: white;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0px;
+    }
+    ul li{
+      font-size: 1.3em;
+  margin: 0;
+  padding: 0px;
+    }
+
+    .button {
+        height: 38px;
+        background: MediumSeaGreen;
+        border: 0;
+        padding: 0 20px;
+        color: lemonchiffon;
+    }
+    
+        .button1 {
+        height: 38px;
+        background: MediumSeaGreen;
+        border: 0;
+        padding: 0 20px;
+        color: lemonchiffon;
+    }
+        .button_1 {
+        height: 38px;
+        background: MediumSeaGreen;
+        border: 0;
+        padding: 0 20px;
+        color: lemonchiffon;
+    }
+    
+    
+
+    .dark {
+        padding: 15px;
+        background: gray;
+        color: #ffffff;
+        margin: 10px 0;
+    }
+
+    /* Boxes */
+    #boxes {
+        margin-top: 20px;
+    }
+
+    #boxes .box {
+        float: left;
+        text-align: center;
+        width: 30%;
+        padding: 10px;
+    }
+
+    #boxes .box img {
+        width: 90px;
+    }
+
+    /* Sidebar */
+    aside#sidebar {
+        float: right;
+        right: translatex(50);
+        width: 30%;
+        margin-top: 10px;
+    }
+
+    /* Main-col */
+    article#main-col {
+        float: left;
+        width: 65%;
+    }
+
+    footer {
+        padding: 20px;
+        color: white;
+        background-color: MediumSeaGreen;
+        text-align: center;
+    }
+
+    #showcase {
+        min-height: 50px;
+        background: url('/frontend/public/img/showcase.jpg') no-repeat center;
+        background-size: cover;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #showcase h1 {
+        margin: 100px 0 10px;
+        font-size: 55px;
+    }
+
+    #showcase p {
+        font-size: 20px;
+    }
+
+    /* Newsletter and Registration */
+    #newsletter,
+    #registration {
+        padding: 15px;
+        color: #ffffff;
+        background: gray;
+    }
+
+    #newsletter h1,
+    #registration h1 {
+        float: left;
+    }
+
+    #newsletter form,
+    #registration form {
+        float: right;
+        margin-top: 15px;
+    }
+
+    #newsletter input[type="email"],
+    #registration input[type="email"],
+    #registration input[type="text"],
+    #registration input[type="number"],
+    #login input[type="email"],
+    #login input[type="name"],
+    #login input[type="username"],
+    #login input[type="number"] {
+        padding: 4px;
+        height: 25px;
+        width: 250px;
+    }
+
+    #registration button,
+    .quote button,
+    #newsletter button {
+        display: block;
+        width: 100%;
+    }
+
+    #registration form input[type="email"],
+    .quote input,
+    .quote textarea,
+    #newsletter form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #login h1 {
+        float: left;
+    }
+
+    #login form {
+        float: right;
+        margin-top: 15px;
+    }
+
+    /* Services */
+    ul#services li {
+        list-style: none;
+        padding: 20px;
+        border: #cccccc solid 1px;
+        margin-bottom: 5px;
+        background: #e6e6e6;
+    }
+    
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 0.8em;
+            margin: 0px;
+        }
+        a {
+            cursor: pointer;
+            color: steelblue;
+        }
+        nav ul li {
+            display: inline;
+            padding: 5px;
+        }
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        nav, section, article {
+            margin: 5px;
+            padding: 8px;
+        }
+        header {
+            background-color: #328db5;
+        }
+        #headerDescription {
+            margin: 5px;
+            padding: 8px;
+            margin-top: 0;
+            color: white;
+        }
+        #content {
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: justify;
+        }
+
+    
+    /* Media Queries */
+    @media(max-width: 768px) {
+        header #branding,
+        header nav,
+        header nav li,
+        #newsletter h1,
+        #newsletter form,
+        #registration h1,
+        #registration form,
+        #boxes .box,
+        article#main-col,
+        aside#sidebar {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    
+    
+    
+
+/* ProjectCollaboration.module.css */
+.collaborationContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.collaborationContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.documentEditor {
+  margin-bottom: 20px;
+}
+.documentTextArea{
+     width: 100%;
+    min-height: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+   box-sizing: border-box;
+}
+.documentTextArea:focus{
+    border-color: MediumSeaGreen;
+}
+
+
+.commentsSection h2 {
+  margin-bottom: 10px;
+}
+.commentsList{
+  max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+     margin-bottom: 10px;
+}
+.comment {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 5px;
+    background-color: #f9f9f9
+}
+.addComment{
+    display: flex;
+}
+.commentInput {
+   flex: 1;
+     padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.commentInput:focus {
+  border-color: MediumSeaGreen;
+}
+.addButton {
+    margin-left: 10px;
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.addButton:hover {
+     background-color: #253725;
+}
+
+.fileSharing {
+  margin-bottom: 20px;
+}
+.fileUpload {
+ display: flex;
+}
+.fileInput {
+ flex:1;
+ padding: 8px;
+ border: 1px solid #ccc;
+  border-radius: 4px;
+ box-sizing: border-box;
+}
+.fileInput:focus {
+  border-color: MediumSeaGreen;
+}
+.uploadButton{
+    margin-left: 10px;
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.uploadButton:hover {
+     background-color: #253725;
+}
+
+
+.fileList {
+  list-style: none;
+  padding: 0;
+}
+
+.fileList li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+.versionHistory{
+    margin-bottom: 20px;
+}
+.versionHistory li{
+     padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.versionHistory li button{
+   padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.versionHistory li button:hover {
+    background-color: #253725;
+}
+
+@media (max-width: 768px) {
+  .collaborationContainer {
+    padding: 15px;
+  }
+}
+
+/* ProjectCreate.module.css */
+.projectCreateContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+}
+
+.projectCreateContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projectCreateContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCreateContainer input,
+.projectCreateContainer textarea{
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.projectCreateContainer input:focus,
+.projectCreateContainer textarea:focus{
+  border-color: MediumSeaGreen
+}
+
+.createButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.createButton:hover {
+     background-color: #253725;
+}
+
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+  .projectCreateContainer {
+    padding: 15px;
+  }
+}
+/* ProjectLifecycle.module.css */
+.lifecycleContainer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+     border: 1px solid #ddd;
+  border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.lifecycleContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lifecycleActions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.lifecycleActions button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lifecycleActions button:hover {
+   background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .lifecycleContainer {
+        padding: 15px;
+    }
+}
+
+
+/* ProjectMetadata.module.css */
+.metadataContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.metadataContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.metadataList {
+  margin-bottom: 15px;
+}
+
+.metadataItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.metadataItem label{
+  font-weight: bold;
+  margin-right: 10px;
+}
+.metadataItem input[type="text"] {
+   flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.metadataItem input[type="text"]:focus {
+  border-color: MediumSeaGreen;
+}
+
+.addMetadata {
+  display: flex;
+}
+
+.addMetadata input {
+    flex: 1;
+    padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.addMetadata input:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.addButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.addButton:hover {
+   background-color: #253725;
+}
+
+.metadataSearch{
+  margin-bottom: 10px;
+}
+.metadataSearch input{
+     padding: 8px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.metadataSearch input:focus{
+  border-color: MediumSeaGreen;
+}
+.searchButton{
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+ .searchButton:hover {
+   background-color: #253725;
+}
+.searchResults{
+  border: 1px solid #ccc;
+  padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.searchResults li{
+    padding: 5px;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+  .metadataContainer {
+    padding: 15px;
+  }
+}
+/* ProjectShare.module.css */
+.shareContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.shareContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shareForm, .shareLink {
+  display: flex;
+    margin-bottom: 10px;
+}
+
+.shareInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.shareInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.accessSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.accessSelect:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.shareButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.shareButton:hover {
+    background-color: #253725;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+    margin-top:10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .shareContainer {
+    padding: 15px;
+  }
+}
+/* ProjectWorkflow.module.css */
+.workflowContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.workflowContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.workflowAddStage, .workflowAddTask, .workflowAssignTask {
+  display: flex;
+    margin-bottom: 10px;
+}
+.workflowInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.workflowInput:focus{
+    border-color: MediumSeaGreen
+}
+.workflowSelect{
+  padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.workflowSelect:focus{
+    border-color: MediumSeaGreen
+}
+
+.addButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.addButton:hover {
+     background-color: #253725;
+}
+
+.workflowList{
+  border: 1px solid #ccc;
+    border-radius: 4px;
+  padding: 10px;
+}
+.workflowStage{
+  margin-bottom: 15px;
+}
+.workflowStage h3{
+    margin-bottom: 10px;
+}
+.taskList {
+  list-style: none;
+    padding: 0;
+}
+
+.taskItem {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background: #f9f9f9
+}
+
+.dependencyList {
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+.dependencyList span{
+    font-weight: bold;
+}
+.dependencyList ul{
+   list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+.dependencyList li {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .workflowContainer {
+    padding: 15px;
+  }
+}
+
+
+/* RealTimeCollaboration.module.css */
+.collaborationContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+   border-radius: 8px;
+     background: #fff;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.collaborationContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.editor {
+    min-height: 400px;
+   border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.toolbar{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.revertButton{
+    padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.revertButton:hover{
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .collaborationContainer {
+    padding: 15px;
+  }
+/* VersionControlUI.module.css */
+.versionControlContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.versionControlContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .versionControlContainer {
+    padding: 15px;
+  }
+}
+
+
+/* ChatComponent.module.css */
+.chatContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+   border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.chatContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.messageList {
+    max-height: 300px;
+    overflow-y: auto;
+     border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+   margin-bottom: 10px;
+}
+.messageItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+}
+.messageInput {
+  display: flex;
+   align-items: center;
+}
+.messageText {
+  flex: 1;
+    padding: 8px;
+   border: 1px solid #ccc;
+    border-radius: 4px;
+      box-sizing: border-box;
+}
+.messageText:focus {
+   border-color: MediumSeaGreen
+}
+.sendButton {
+  padding: 8px 12px;
+   background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.sendButton:hover {
+   background-color: #253725;
+}
+
+
+@media (max-width: 768px) {
+  .chatContainer {
+    padding: 15px;
+  }
+}
+
+/* NotificationList.module.css */
+.notificationContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+   border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.notificationContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notificationList {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.notificationItem {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+     justify-content: space-between;
+    background-color: #f9f9f9;
+}
+.notificationItem span{
+      margin-right: 10px;
+}
+
+.timestamp{
+    font-size: 12px;
+    color: gray;
+}
+.read{
+    opacity: 0.7
+}
+.markReadButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.markReadButton:hover{
+  background-color: #253725;
+}
+
+@media (max-width: 768px) {
+  .notificationContainer {
+    padding: 15px;
+  }
+}
+
+/* TaskManagement.module.css */
+.taskManagementContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+   border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.taskManagementContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.newTaskForm {
+    display: flex;
+  flex-direction: column;
+     margin-bottom: 10px;
+}
+.selectInput {
+     padding: 8px;
+     border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.selectInput:focus{
+    border-color: MediumSeaGreen;
+}
+.taskInput {
+    width: 100%;
+     padding: 8px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.taskInput:focus{
+   border-color: MediumSeaGreen;
+}
+.createButton {
+   padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.createButton:hover {
+    background-color: #253725;
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+}
+.taskItem {
+    padding: 5px;
+      border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .taskManagementContainer {
+    padding: 15px;
+  }
+}

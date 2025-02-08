@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="project_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+          background: #2c3e50;
+          color: white;
+          padding: 15px;
+          text-align: center;
+          
+        }
+        header nav a {
+          color: white;
+          margin: 0 15px;
+          text-decoration: none;
+          
+        }
+
+        .dashboardContainer {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .mainContent {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .overview {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metric {
+            flex: 1;
+            margin: 0 10px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .progressBar {
+            margin-top: 15px;
+        }
+
+        .progress {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #progressFill {
+            height: 20px;
+            background: #27ae60;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+
+        .recentActivity, .notifications {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .dashboardContainer {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+
+            .mainContent {
+                padding: 10px;
+            }
+
+            .metrics {
+                flex-direction: column;
+            }
+
+            .metric {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Project Dashboard</h1>
+    <nav>
+      <a href="/frontend/public/index.html">Home</a>
+      <a href="/frontend/public/blog.html">Blog</a></li>
+      <a href="#" id="logout">Logout</a>
+    </nav>
+  </header>
+    <div class="dashboardContainer">
+        <nav class="sidebar">
+            <h2>Project Dashboard</h2>
+            <ul>
+                <li><a href="/frontend/public/index.html">Home</a></li>
+                <li><a href="create_project.html">Create Project</a></li>
+                <li><a href="project_workspace.html">Project Workspace</a></li>
+                <li><a href="ProjectMetadata.html">Metadata</a></li>
+                <li><a href="ProjectCollaboration.html">Collaboration</a></li>
+                <li><a href="TaskManagement.html">Tasks</a></li>
+                <li><a href="VersionControl.html">Version Control</a></li>
+                <li><a href="ProjectWorkflow.html">Workflow</a></li>
+                <li><a href="ProjectShare.html">Share</a></li>
+                <li><a href="ProjectLifecycle.html">Lifecycle</a></li>
+                <li><a href="ChatComponent.html">Chat</a></li>
+                <li><a href="NotificationList.html">Notifications</a></li>
+            </ul>
+        </nav>
+        <main class="mainContent">
+            <div class="overview">
+                <h2>Project Overview</h2>
+                <div class="metrics">
+                    <div class="metric">
+                        <h3>Status</h3>
+                        <p id="projectStatus">In Progress</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Tasks Completed</h3>
+                        <p id="tasksCompleted">8</p>
+                    </div>
+                    <div class="metric">
+                        <h3>Total Tasks</h3>
+                        <p id="totalTasks">12</p>
+                    </div>
+                </div>
+                <div class="progressBar">
+                    <h3>Progress</h3>
+                    <div class="progress">
+                        <div id="progressFill" style="width: 66%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="recentActivity">
+                <h2>Recent Activity</h2>
+                <ul id="activityFeed">
+                    <!-- Recent activities will be dynamically populated here -->
+                </ul>
+            </div>
+            <div class="notifications">
+                <h2>Notifications</h2>
+                <div id="notificationList">
+                    <!-- Notifications will be dynamically populated here -->
+                </div>
+            </div>
+            <!-- Search inputs -->
+            <input type="text" id="activitySearch" placeholder="Search activities..." />
+            <input type="text" id="notificationSearch" placeholder="Search notifications..." />
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/project_dashboard.js"></script>
+</body>
+</html>

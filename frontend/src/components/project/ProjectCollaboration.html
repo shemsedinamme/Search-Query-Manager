@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Collaboration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="collaborationContainer">
+    <h1>Project Collaboration</h1>
+    <div class="documentEditor">
+      <textarea
+        id="documentContent"
+        placeholder="Type document content here..."
+        class="documentTextArea"
+      ></textarea>
+    </div>
+    <div class="commentsSection">
+      <h2>Comments</h2>
+      <div id="commentsList" class="commentsList"></div>
+      <div class="addComment">
+        <input
+          type="text"
+          id="newComment"
+          placeholder="Add a comment"
+          class="commentInput"
+        />
+        <button id="addCommentButton" class="addButton">Add Comment</button>
+      </div>
+    </div>
+    <div class="fileSharing">
+      <h2>File Sharing</h2>
+      <div class="fileUpload">
+        <input type="file" id="newFile" class="fileInput" />
+        <button id="uploadFileButton" class="uploadButton">Upload File</button>
+      </div>
+      <ul id="fileList" class="fileList"></ul>
+    </div>
+    <div class="versionHistory">
+      <h2>Version History</h2>
+      <ul id="versionHistoryList"></ul> 
+    </div>
+    <div class="collaboratorsSection">
+      <h2>Collaborators</h2>
+      <div class="inviteCollaborators">
+        <input
+          type="text"
+          id="newCollaborators"
+          placeholder="Invite collaborators (comma separated emails)"
+          class="inviteInput"
+        />
+        <select id="collaboratorRole" class="roleSelect">
+          <option value="member">Member</option>
+          <option value="editor">Editor</option>
+          <option value="owner">Owner</option>
+        </select>
+        <button id="inviteButton" class="inviteButton">Invite</button>
+      </div>
+      <ul id="collaboratorList" class="collaboratorList"></ul>
+    </div>
+    <div class="transferOwnership">
+      <h2>Transfer Project Ownership</h2>
+      <input type="text" id="newOwnerEmail" placeholder="New owner's email" class="ownerInput" />
+      <button id="transferOwnershipButton" class="transferButton">Transfer</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/ProjectCollaboration.js"></script>
+</body>
+</html>

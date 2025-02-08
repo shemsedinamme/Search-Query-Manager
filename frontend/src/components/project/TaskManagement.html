@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="taskManagementContainer">
+        <h1>Task Management</h1>
+        <div class="newTaskForm">
+            <input type="text" id="newTaskName" placeholder="Enter new task name" class="taskInput" /><br>
+            <textarea id="newTaskDescription" placeholder="Enter new task description" class="taskInput"></textarea><br>
+            <select id="assignedUser" class="selectInput">
+                <option value="" disabled selected>Select a user for task assignment</option>
+            </select><br>
+            <input type="date" id="dueDate" placeholder="Enter due date for the task" class="taskInput" />
+            <button id="createTaskButton" class="createButton">Create Task</button>
+        </div>
+        <ul id="taskList" class="taskList"></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/TaskManagement.js"></script>
+</body>
+</html>

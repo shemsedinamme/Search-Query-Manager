@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Workflow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="workflowContainer">
+        <h1>Project Workflow</h1>
+        <div class="workflowAddStage">
+            <input type="text" id="newStage" placeholder="Add new workflow stage" class="workflowInput" />
+            <button id="addStageButton" class="addButton">Add Stage</button>
+        </div>
+        <div class="workflowAddTask">
+            <select id="selectedStage" class="workflowSelect">
+                <option value="" disabled selected>Select a Stage</option>
+            </select>
+            <input type="text" id="newTask" placeholder="Add new task" class="workflowInput" />
+            <button id="addTaskButton" class="addButton">Add Task</button>
+        </div>
+        <div class="workflowAssignTask">
+            <select id="selectedTask" class="workflowSelect">
+                <option value="" disabled selected>Select a task to assign</option>
+            </select>
+            <select id="assignee" class="workflowSelect">
+                <option value="" disabled selected>Select User</option>
+            </select>
+            <input type="date" id="dueDate" placeholder="Due Date" class="workflowInput" />
+            <button id="assignTaskButton" class="addButton">Assign Task</button>
+        </div>
+        <div id="workflowList" class="workflowList"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/ProjectWorkflow.js"></script>
+</body>
+</html>
