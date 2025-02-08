@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Settings Dashboard</title>
+  <link rel="stylesheet" href="settingstyle.css">
+  <!-- Include Chart.js for visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboardContainer">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <h2>Settings</h2>
+      <ul>
+        <li><a href="/frontend/public/index.html">Home</a></li>
+        <li><a href="/frontend/public/dashboard.html">Main Dashboard</a></li>
+        <li><a href="#backupRecovery">Backup & Recovery</a></li>
+        <li><a href="#performanceMonitoring">Performance Monitoring</a></li>
+        <li><a href="#systemSettings">System Settings</a></li>
+        <li><a href="#userAnalytics">User Analytics</a></li>
+        <li><a href="#securitySettings">Security Settings</a></li>
+      </ul>
+      <div class="logoutSection">
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="mainContent">
+      <!-- Header -->
+      <div class="header">
+        <h1>System Settings Dashboard</h1>
+        <div class="notifications">
+          <span id="notificationBell">🔔</span>
+          <div id="notificationDropdown" class="notificationDropdown">
+            <p>No new notifications.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backup & Recovery Section -->
+      <section id="backupRecovery" class="dashboardSection">
+        <h2>Backup & Recovery</h2>
+        <div class="actions">
+          <button id="initiateBackupButton" class="backupButton">Initiate Data Backup</button>
+          <button id="testRecoveryButton" class="testButton">Test Data Recovery</button>
+        </div>
+      </section>
+
+      <!-- Performance Monitoring Section -->
+      <section id="performanceMonitoring" class="dashboardSection">
+        <h2>Performance Monitoring</h2>
+        <div class="metricsDisplay">
+          <p><strong>CPU Usage:</strong> <span id="cpuUsage"></span> %</p>
+          <p><strong>Memory Usage:</strong> <span id="memoryUsage"></span> MB</p>
+          <p><strong>Disk I/O:</strong> <span id="diskIO"></span> KB/s</p>
+        </div>
+      </section>
+
+      <!-- System Settings Section -->
+      <section id="systemSettings" class="dashboardSection">
+        <h2>System Settings</h2>
+        <div class="settingItem">
+          <label>
+            Email Notifications:
+            <input type="checkbox" id="emailNotifications" />
+          </label>
+        </div>
+        <div class="settingItem">
+          <label>Default Settings</label>
+          <textarea id="defaultSettings" class="settingsInput"></textarea>
+        </div>
+        <div class="settingItem">
+          <label>Branding</label>
+          <input type="text" id="branding" class="settingsInput" />
+        </div>
+        <button id="saveSettingsButton" class="saveButton">Save Settings</button>
+      </section>
+
+      <!-- User Analytics Section -->
+      <section id="userAnalytics" class="dashboardSection">
+        <h2>User Analytics</h2>
+        <div class="analyticsDisplay">
+          <p><strong>Total Users:</strong> <span id="totalUsers"></span></p>
+          <p><strong>Active Users:</strong> <span id="activeUsers"></span></p>
+          <p><strong>Average Time Spent per User:</strong> <span id="averageTimeSpent"></span> mins</p>
+        </div>
+        <canvas id="userAnalyticsChart"></canvas>
+      </section>
+
+      <!-- Security Settings Section -->
+      <section id="securitySettings" class="dashboardSection">
+        <h2>Security Settings</h2>
+        <div class="settingItem">
+          <label>
+            Two-Factor Authentication (2FA):
+            <button id="toggle2FAButton" class="toggleOffButton">Off</button>
+          </label>
+        </div>
+        <div class="settingItem">
+          <button id="manageSSOButton" class="ssoButton">Manage Single Sign-On</button>
+        </div>
+      </section>
+
+      <!-- Recent User Activity Feed -->
+      <section id="recentActivity" class="dashboardSection">
+        <h2>Recent User Activity</h2>
+        <ul id="activityFeed"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/setting_dashboard.js"></script>
+</body>
+</html>

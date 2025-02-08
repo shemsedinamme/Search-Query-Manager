@@ -1,0 +1,442 @@
+/* General style.css */
+/* General Styles */
+body {
+  font - family: Arial, sans - serif;
+  margin: 0;
+  padding: 0;
+  background - color: #f4f4f4;
+}
+
+.dashboardContainer {
+  display: flex;
+}
+
+.sidebar {
+  width: 250 px;
+  background - color: #333;
+  color: # fff;
+  padding: 20 px;
+  height: 100 vh;
+}
+
+.sidebar h2 {
+  margin - bottom: 20 px;
+}
+
+.sidebar ul {
+  list - style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin - bottom: 10 px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text - decoration: none;
+}
+
+.sidebar ul li a: hover {
+    text - decoration: underline;
+  }
+
+  .logoutSection {
+    margin - top: 20 px;
+  }
+
+  .logoutSection a {
+    color: #fff;
+    text - decoration: none;
+  }
+
+  .logoutSection a: hover {
+    text - decoration: underline;
+  }
+
+  .mainContent {
+    flex: 1;
+    padding: 20 px;
+  }
+
+  .header {
+    display: flex;
+    justify - content: space - between;
+    align - items: center;
+    margin - bottom: 20 px;
+  }
+
+  .notifications {
+    position: relative;
+  }
+
+  .notificationDropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background - color: #fff;
+    border: 1 px solid #ddd;
+    padding: 10 px;
+    width: 200 px;
+    box - shadow: 0 2 px 4 px rgba(0, 0, 0, 0.1);
+  }
+
+  .dashboardSection {
+    margin - bottom: 30 px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10 px;
+  }
+
+  .backupButton, .testButton, .saveButton, .ssoButton {
+    padding: 8 px 12 px;
+    border: none;
+    border - radius: 4 px;
+    cursor: pointer;
+    font - size: 14 px;
+  }
+
+  .backupButton, .saveButton, .ssoButton {
+    background - color: MediumSeaGreen;
+    color: lemonchiffon;
+  }
+
+  .testButton {
+    background - color: gray;
+    color: lemonchiffon;
+  }
+
+  .toggleOnButton {
+    background - color: MediumSeaGreen;
+    color: lemonchiffon;
+  }
+
+  .toggleOffButton {
+    background - color: gray;
+    color: lemonchiffon;
+  }
+
+  .settingsInput {
+    width: 100 % ;
+    padding: 8 px;
+    border: 1 px solid #ccc;
+    border - radius: 4 px;
+    margin - top: 5 px;
+  }
+
+#userAnalyticsChart {
+  max - width: 600 px;
+  margin - top: 20 px;
+}
+
+#activityFeed {
+  list - style: none;
+  padding: 0;
+}
+
+#activityFeed li {
+  background - color: #fff;
+  padding: 10 px;
+  border: 1 px solid #ddd;
+  margin - bottom: 5 px;
+  border - radius: 4 px;
+}
+
+@media(max - width: 768 px) {
+  .dashboardContainer {
+    flex - direction: column;
+  }
+
+  .sidebar {
+    width: 100 % ;
+    height: auto;
+  }
+
+  .mainContent {
+    padding: 10 px;
+  }
+}
+/* BackupRecovery.module.css */
+
+.backupContainer {
+
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+     border-radius: 8px;
+      background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.backupContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.actions {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.backupButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px
+}
+.backupButton:hover {
+    background-color: #253725;
+}
+.testButton {
+     padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+      margin: 0 5px
+}
+.testButton:hover {
+    background-color: #253725;
+}
+
+
+@media (max-width: 768px) {
+  .backupContainer {
+    padding: 15px;
+  }
+}
+
+----
+
+
+
+/* PerformanceMonitoring.module.css */
+
+.monitoringContainer {
+
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+   border: 1px solid #ddd;
+    border-radius: 8px;
+      background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.monitoringContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.metricsDisplay {
+ padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.metricsDisplay p {
+  margin-bottom: 5px;
+}
+
+.metricsDisplay strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .monitoringContainer {
+    padding: 15px;
+  }
+}
+
+
+
+
+/* SystemSettings.module.css */
+
+.settingsContainer {
+
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+   border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.settingsContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.settingItem {
+    margin-bottom: 10px;
+}
+.settingItem label{
+   display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
+.settingItem input[type="checkbox"] {
+  margin-right: 10px;
+}
+.settingsInput {
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.settingsInput:focus{
+ border-color: MediumSeaGreen;
+}
+.saveButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.saveButton:hover {
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .settingsContainer {
+    padding: 15px;
+  }
+}
+
+
+
+/* UserAnalytics.module.css */
+.analyticsContainer {
+  max - width: 600 px;
+  margin: 20 px auto;
+  padding: 20 px;
+  border: 1 px solid #ddd;
+  border - radius: 8 px;
+  background: #fff;
+  box - shadow: 0 2 px 4 px rgba(0, 0, 0, 0.1)
+}
+
+.analyticsContainer h1 {
+  text - align: center;
+  margin - bottom: 20 px;
+}
+
+.analyticsDisplay {
+  padding: 10 px;
+  border: 1 px solid #eee;
+  border - radius: 4 px;
+  margin - bottom: 10 px;
+}
+.analyticsDisplay strong {
+  font - weight: bold;
+  margin - right: 10 px;
+}
+.analyticsDisplay p {
+  margin - bottom: 5 px;
+}
+
+
+@media(max - width: 768 px) {
+  .analyticsContainer {
+    padding: 15 px;
+  }
+}
+
+
+/* SecuritySettings.module.css */
+.securitySettingsContainer {
+  max - width: 600 px;
+  margin: 20 px auto;
+  padding: 20 px;
+  border: 1 px solid #ddd;
+  border - radius: 8 px;
+  background: #fff;
+  box - shadow: 0 2 px 4 px rgba(0, 0, 0, 0.1)
+}
+
+.securitySettingsContainer h1 {
+  text - align: center;
+  margin - bottom: 20 px;
+}
+.settingItem {
+  display: flex;
+  align - items: center;
+  justify - content: space - between;
+  margin - bottom: 10 px;
+}
+.settingItem label {
+  font - weight: bold;
+  margin - right: 10 px;
+}
+.toggleOnButton {
+  padding: 8 px 12 px;
+  background - color: MediumSeaGreen;
+  color: lemonchiffon;
+  border: none;
+  border - radius: 4 px;
+  cursor: pointer;
+  font - size: 14 px;
+}
+.toggleOnButton: hover {
+    background - color: #253725;
+
+}
+
+.toggleOffButton {
+
+      padding: 8px 12px;
+
+    background-color: gray;
+
+    color: lemonchiffon;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+.toggleOffButton:hover {
+
+    background-color: # 253725;
+  }
+  .ssoButton {
+    padding: 8 px 12 px;
+    background - color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border - radius: 4 px;
+    cursor: pointer;
+    font - size: 14 px;
+  }
+  .ssoButton: hover {
+    background - color: #253725;
+
+}
+
+@media (max-width: 768px) {
+
+  .securitySettingsContainer {
+
+    padding: 15px;
+
+  }
+
+}
