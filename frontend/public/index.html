@@ -1,1 +1,582 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMS Hub - Your NCD Management Partner</title>
+    <link rel="stylesheet" href="/frontend/src/components /dashboard.css"> <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #328db5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #007acc;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            height="100%"
+        }
+        footer {
+            background-color: #328db5;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to ARMS Hub - Your SR Management Partner</h1>
+</header>
+
+<nav>
+
+            
+    <a id='ahome' href="frontend/public/home.html">Home</a>
+    <a id='ablog' href="/frontend/public/blog.html">Blog</a>
+    <a id='aabout' href="frontend/publicabout.html">About</a>
+    <a id='acontact' href="frontend/public/contact.html">Contact</a>
+    <a id='alogin' href="frontend/public/login.html">Login</a>
+    <a id='a dashboard' href="frontend/public/dashboard.html">Dashboard</a>
+</nav>
+
+<main>
+    <h2>Revolutionize Your SR Management with ARMS Hub</h2>
+    <p>ARMS Hub is your one-stop platform for streamlining SR processes. We empower Researchers with the tools they need to effectively SR.</p>
+    
+    <h3>Your Gateway to Efficient Management of SR</h3>
+    
+    <p>ARMS Hub is your comprehensive platform for managing Systematic reviews, providing vital topls. Stay informed and empowered with the latest insights and resources tailored for healthcare professionals, policy makers, and researchers.</p>
+    
+    <div>
+    <h3>ARMS Hub - A Suite of Powerful SR Management Tools</h3>
+      <p>Visit our blog for more insights and resources on SR management. <a href="https://reviewhub.net.et/contact">Contact us</a> to learn more about how ARMS Hub can benefit your organization.</p>
+    </div>
+</main>
+<script>
+      <script>
+         $(document).ready(function() {
+             const apiBaseUrl = 'http://localhost:3306'; // Set your API URL
+           function homePage() {
+                var pagecontent = "Welcome to Review<ul><li>Conduct Review</li> <li>Blog</li> <li>Resources</li> <li>Registration</li></ul>with a basic knowledge...";
+                $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+                $('#headerDescription').text('Home Page');
+           }
+          $('#ahome').click(homePage);
+          
+ $('#acontact').click(function() {
+   var pagecontent = `
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <article>
+                     <h2>Contact Us</h2>
+                    <p>If you have any questions, please visit our blog page and use this contact form:</p>
+               <div class="container">
+        
+         <h3>Why Choose ARMS?</h3>
+         <p>ARMS is purpose-built to assist researchers at every stage of the review process. <br>Whether you're working on scoping reviews, qualitative and  quantitative <br>systematic reviews, mixed-methods reviews, or meta-analyses,<br> ARMS has the tools to support you from start to finish.
+         </p>
+       </div>
+                      
+                </article>
+                <aside id="sidebar">
+                    <div class="dark">
+                        <h3>Contact Us</h3>
+                        <form class="quote" id="contactForm">
+                            <div>
+                                <label>Name</label><br>
+                                <input type="text" id="contactName" placeholder="Name" required>
+                            </div>
+                           <div>
+                                <label>Email</label><br>
+                                <input type="email" id="contactEmail" placeholder="Email Address" required>
+                            </div>
+                            <div>
+                                <label>Message</label><br>
+                                 <textarea id="contactMessage" placeholder="Message" required></textarea>
+                            </div>
+                             <button class="button1" type="submit">Send</button>
+                          </form>
+                     </div>
+                 </aside>
+            </div>
+            
+        `;
+        
+        
+   $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+   $('#headerDescription').text('Contact Page');
+   $('#contactForm').submit(function(event) {
+     event.preventDefault();
+     const name = $('#contactName').val();
+     const email = $('#contactEmail').val();
+     const message = $('#contactMessage').val();
+     console.log('Sending new email to contact form:', name, email, message);
+     alert('Thanks for contacting, we will be back to you shortly!');
+     //Implement the ajax calls here to send emails to admin.
+   });
+ });
+ 
+ 
+ $('#aabout').click(function() {
+  var pagecontent = `
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">About Us</h1>
+          <p>
+           Are you a researcher aiming to streamline your systematic reviews and meta-analyses? Look no further than ARMS—the Augmented Review Management System—a cutting-edge software solution designed to simplify, automate, and enhance every aspect of review studies. From traditional literature reviews to complex systemic review and meta-analyses, ARMS is here to revolutionize your research journey.</p>
+            <h3>Discover ARMS: Transforming Systematic Reviews and Meta-Analyses for Researchers
+</h3>            
+          
+          <p class="dark">
+          	ARMS designed to automate the management and execution of review studies and support researchers throughout the studies . 
+ARMS will handle management of traditional literature reviews, scoping reviews, and various types of systematic reviews including  
+both qualitative and quantitative review, mixed methods reviews, and meta-analysis. It will support the entire review process from project creation, planning, study selection, data extraction, to synthesis, analysis, and reporting. 	
+
+
+          </p>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Why Choose ARMS?
+</h3>
+            <p>ARMS is purpose-built to assist researchers at every stage of the review process. Whether you're working on scoping reviews, qualitative and quantitative systematic reviews, mixed-methods reviews, or meta-analyses, ARMS has the tools to support you from start to finish:
+</p>
+          </div>
+                    <div class="dark">
+           
+
+            
+<div class="grid-item">        
+        	<h2>Meet Developper</h2> 
+      <img src="/frontend/public/img/shamsedin.jpg" style= "width: 100%; height: ;  object-fit: cover;    border-radius: 50%;" alt="Shemsedin Amme">
+   </div>       
+  
+  <div class="grid-item">         	
+         <h3><span class="highlight" style:"color: blue";>Shemsedin Amme</span> <br>The Developer</h3>
+         <p style="font-size: 15px; align-items: center; text-align: center; top: 10%; left: 10%;"><span class="highlight" style:"color: blue";>Shemsedin Amme</span> is an Assistant Professor at <a href="https://www.ju.edu.et" style="text-decoration: none; color:blue;">Jimma University</a>, Ethiopia, and a PhD candidate specializing in evidence-based healthcare . He holds a Master’s degree from <a href="https://www.asu.edu.et" style="text-decoration: none; color:blue;">Addis Ababa University</a> and has extensive academic and clinical experience, particularly in emergency and critical care. He has published numerous research articles on healthcare issues, with a focus on emergency services. He is also a co-founder and regular contributor to the <a href="https://www.horninsight.com" style="text-decoration: none; color:blue;">HornInsight.</a>
+         </p>
+<h3>Contact</h3>  
+<p id: "tel" style="font-size: 15px;"><a href="tel:+251912748275" style="text-decoration: none;color:white;">Phone:+251 912748275</a><br>
+<a href="email:shamsuamme@gmail.com" style="text-decoration: none; color:white;">Email: admin@reviewhub.net.et</a> /<br> shemsedin.ibro@ju.edu.et </p>
+<p style="font-size: 15px; align-items: center; text-align: center; top: 10%; left: 10%;">Jimma, Ethiopia.</p>
+
+</div>
+
+        </aside>
+      </div>
+    </section>
+
+  
+  `;
+  $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+  $('#headerDescription').text('About Page');
+$('#content').css({'left':'1000px','position':'fixed'}).animate({left:'5px'});
+$('#content').css({'position':'relative'});
+});   
+            $('#adashboard').click(function() {
+                renderDashboard();
+           });
+            function renderDashboard() {
+                const token = localStorage.getItem('token');
+                 var pagecontent = `
+                    <div class="dashboardHeader">
+                        <h1>Dashboard</h1>
+                        <button id="logoutButton" type="button">Logout</button>
+                    </div>
+                   <div class="adminTaskbar" id="menuItems"></div>
+                    <main class="dashboardGrid">
+                        <section class="dashboardSection" id="dashboardContentArea">
+                            <div id="submenuItems"></div>
+                          <div id="tableContainer"></div>
+                     </section>
+                      <section class="icon" style="backgroundImage: url(/frontend/public/img/showcase.jpg")" />
+                  </main>
+                    <footer class="dashboardFooter">
+                        <p>© 2025 ARMS. All Rights Reserved.</p>
+                    </footer>
+                `;
+             $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+               $('#headerDescription').text('Dashboard');
+              const menuItems = getMenuItems('user');
+              renderMenuItems(menuItems);
+               renderProjectOverview();
+              $('#logoutButton').click(handleLogout);
+         }
+         function renderMenuItems(menuItems) {
+               let menuHTML = '';
+                if(menuItems) {
+               menuItems.forEach(menu => {
+                 menuHTML += `<h2>${menu.title}</h2><ul>`;
+                    menu.items.forEach(item => {
+                      menuHTML += `<li><a class="menu-link" href="#" data-section="${item.label}">${item.label}</a></li>`;
+                    });
+                    menuHTML += `</ul>`;
+                });
+              $('#menuItems').html(menuHTML);
+              $('#content').on('click', '.menu-link', function(e) {
+                  e.preventDefault();
+                    const section = $(this).data('section');
+                  renderSection(section);
+                });
+            }
+          }
+        function handleLogout() {
+          const token = localStorage.getItem('token');
+            $.ajax({
+                url: `${apiBaseUrl}/logout`,
+                  type: 'POST',
+                  headers: {
+                      'Authorization': `Bearer ${token}`,
+                  },
+                   success: function() {
+                       localStorage.removeItem('token');
+                        alert('Logged out successfully');
+                        window.location.href = '/login';
+                   },
+                error: function(xhr, status, error) {
+                      console.error('Error while logging out:', xhr.responseText);
+                       $('#content').append(`<div class="error">Error while logging out: ${xhr.responseText}</div>`);
+                   }
+              });
+            }
+          $('#alogin').click(function() {
+            var pagecontent = "You can login or register for a new account <a href='https://reviewhub.net.et/login' target='_blank'>here</a><br>";
+              pagecontent += "<div id='login-form'></div>";
+            $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+             $('#headerDescription').text('Login Page');
+            renderLoginForm();
+        });
+      function renderLoginForm() {
+          $('#login-form').html(`
+                <div class="loginContainer">
+                     <h1>Sign In</h1>
+                    <div class="inputGroup">
+                         <input type="text" id="usernameEmail" placeholder="Username or Email..." />
+                    </div>
+                    <div class="inputGroup">
+                        <input type="password" id="loginPassword" placeholder="Enter password..." />
+                    </div>
+                  <button id="loginButton" class="button1">Login</button>
+                    <div style="text-align: right; margin: 10px 0;">
+                        <a href="#" id="forgotPassword">Forgot Password?</a>
+                   </div>
+               </div>
+           `);
+            $('#loginButton').click(function() {
+              const usernameEmail = $('#usernameEmail').val();
+                const password = $('#loginPassword').val();
+                 if(!usernameEmail || !password) return $('#content').append('<div class="error">Please provide username and password!</div>')
+                $.ajax({
+                   url: `${apiBaseUrl}/login`,
+                      type: 'POST',
+                    contentType: 'application/json',
+                   data: JSON.stringify({usernameEmail, password }),
+                      success: function(data){
+                         localStorage.setItem('token', data.token)
+                         alert('Login Successful!');
+                         renderDashboard();
+                      },
+                   error: function(xhr){
+                      console.error('Error during login:', xhr.responseText);
+                       $('#content').append(`<div class="error">Invalid login credentials. Please try again.: ${xhr.responseText}</div>`);
+                     }
+               });
+          });
+           $('#forgotPassword').click(function() {
+               const usernameEmail = $('#usernameEmail').val();
+                if(!usernameEmail) return  $('#content').append('<div class="error">Please provide an email for password reset.</div>')
+                 $.ajax({
+                    url: `${apiBaseUrl}/reset-password-request`,
+                      type: 'POST',
+                      contentType: 'application/json',
+                     data: JSON.stringify({ email: usernameEmail }),
+                      success: function(data){
+                         alert('Password reset email sent successfully. Please check your inbox.');
+                      },
+                    error: function(xhr){
+                       console.error('Error while reset password:', xhr.responseText);
+                       $('#content').append(`<div class="error">Unable to send password reset email. Please try again later.: ${xhr.responseText}</div>`);
+                    }
+              });
+         });
+        }
+        $('#aregistration').click(function() {
+          var pagecontent = "<div id='registration-form'></div>";
+            $('#content').html(pagecontent).fadeOut('fast').fadeIn('fast');
+            $('#headerDescription').text('Registration Page');
+           renderRegistrationForm();
+        });
+       function renderRegistrationForm() {
+           $('#content').html(`
+               <div class="registrationContainer">
+                   <h1>Registration</h1>
+                    <form id="registrationForm">
+                       <input type="text" id="username" placeholder="Username..." required />
+                        <input type="email" id="email" placeholder="Email..." required />
+                       <input type="password" id="password" placeholder="Enter Password..." required />
+                        <select id="subscriptionOption" required>
+                             <option value="" disabled selected>Select Subscription Type</option>
+                           <option value="Individual">Individual</option>
+                           <option value="Group">Group</option>
+                           <option value="Organizational">Organizational</option>
+                          <option value="Student">Student</option>
+                    </select>
+                 <button type="submit" class="button1">Submit</button>
+               </form>
+             </div>
+        `).fadeOut('fast').fadeIn('fast');
+         $('#headerDescription').text('Registration Page');
+           $('#registrationForm').submit(function(event) {
+                event.preventDefault(); // Prevent default form submission
+                  const username = $('#username').val();
+                  const email = $('#email').val();
+                const password = $('#password').val();
+                   const subscriptionOption = $('#subscriptionOption').val();
+               if(!username || !email || !password || !subscriptionOption)  return $('#content').append('<div class="error">Please provide valid inputs for registration.</div>')
+                $.ajax({
+                    url: `${apiBaseUrl}/register`,
+                      type: 'POST',
+                    contentType: 'application/json',
+                   data: JSON.stringify({ username, email, password, subscriptionOption }),
+                     success: function(data) {
+                         alert('Thank you for creating an account! Your registration is successful.');
+                          renderLoginForm();
+                       },
+                     error: function(xhr){
+                        console.error('Error during registration:', xhr.responseText);
+                       $('#content').append(`<div class="error">Error during registration, please verify you inputs, and try again: ${xhr.responseText}</div>`);
+                    }
+               });
+            });
+       }
+        function renderSimpleTable() {
+            const tableData = [
+                { name: 'Database A', imported: 50, included: 20, excluded: 10, not_decided: 5 },
+                { name: 'Database B', imported: 70, included: 30, excluded: 15, not_decided: 10 },
+                { name: 'Database C', imported: 80, included: 40, excluded: 25, not_decided: 15 },
+          ];
+            const tableHeaders = ["Database", "Imported", "Included", "Excluded", "Not Decided"];
+         let tableHtml = `
+             <div class="dashboardSection">
+                 <h2>Projects Table</h2>
+                     <table class="table" style="width: 100%;">
+                         <thead>
+                           <tr>`;
+                  tableHeaders.forEach(header => {
+                      tableHtml += `<th>${header}</th>`;
+                    });
+                    tableHtml += `</tr>
+                   </thead>
+                     <tbody>`;
+               tableData.forEach(row => {
+                      tableHtml += `<tr>`
+                    tableHeaders.forEach(col => {
+                        tableHtml += `<td>${row[col]}</td>`;
+                  })
+                  tableHtml += `</tr>`
+                })
+               tableHtml +=`
+                 </tbody>
+                  </table>
+                </div>
+            `;
+          $('#tableContainer').html(tableHtml)
+      }
+         function getMenuItems(role) {
+            if(role === 'admin'){
+                    return [
+                       {
+                             title: 'System Admin',
+                            items: [
+                                  { path: '#settings', label: 'Settings' },
+                                   { path: '#user-management', label: 'User Management' },
+                                  { path: '#registration', label: 'User Registration' },
+                                  { path: '#manage-roles', label: 'Role Management' },
+                                 { path: '#audit-logs', label: 'Audit Logs' },
+                                  { path: '#user-activity', label: 'User Activity' }
+                              ]
+                        },
+                       ]
+                  } else {
+                      return [
+                         {
+                            title: 'Project Dashboard',
+                            items: [
+                                 { path: '#project-overview', label: 'Project Overview' },
+                                 { path: '#planning-review', label: 'Planning Review' },
+                                   { path: '#conducting-review', label: 'Conducting Review' },
+                                 { path: '#reporting-review', label: 'Reporting Review' }
+                                 ],
+                                subMenus: [{
+                                    title: 'Project Overview',
+                                     items: [
+                                           { path: '#current-review-summary', label: 'Current project summary' },
+                                          { path: '#current-project-progress', label: 'Current project progress' },
+                                           { path: '#edit-project', label: 'Edit project' },
+                                          { path: '#export-project-data', label: 'Export project data' }
+                                      ]
+                                 }, {
+                                      title: 'History',
+                                       items: [
+                                          { path: '#published-projects', label: 'Published projects' },
+                                          { path: '#unpublished-projects', label: 'Unpublished projects' }
+                                       ]
+                                  }]
+                        }
+                      ]
+                 }
+             }
+        function renderSection(section) {
+            let sectionContent = '';
+             switch (section) {
+                 case 'Project Overview':
+                      sectionContent = `<h2>Project Overview</h2>
+                                         <p>Overview content here.</p>
+                                          <h3>Project History</h3>
+                                             <ul>
+                                                <li>Project A</li>
+                                               <li>Project B</li>
+                                            </ul>
+                                          <h3>Current Project Summary</h3>
+                                             <table style="width: 100%;">
+                                                  <thead>
+                                                      <tr>
+                                                           <th>Name</th>
+                                                         <th>Created</th>
+                                                           <th>Accomplished</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                       <tr>
+                                                           <td>Project A</td>
+                                                           <td>5</td>
+                                                           <td>3</td>
+                                                       </tr>
+                                                    <tr>
+                                                          <td>Project B</td>
+                                                           <td>7</td>
+                                                           <td>5</td>
+                                                      </tr>
+                                               </tbody>
+                                           </table>`;
+                        break;
+                   case 'Planning Review':
+                         sectionContent = `<h2>Planning Review</h2>
+                                          <p>Planning review content here.</p>
+                                         <h2>Create Project<h2>
+                                             <a href="/frontend/src/components/dashboard/templates/create_project.html">Create Project</a><br/>
+                                           <a href="/frontend/src/components/dashboard/templates/invite_collaborators.html">Invite Collaborators</a>
+                                       <h2>Planning Review</h2>
+                                          <h3>Protocol Management</h3>
+                                            <a href="/frontend/src/components/dashboard/templates/create_protocol.html">Create Protocol</a><br/>
+                                            <a href="/frontend/src/components/dashboard/templates/edit_protocol.html">Edit Protocol</a><br/>
+                                              <a href="/frontend/src/components/dashboard/templates/view_versions.html">View Versions</a><br/>
+                                           <a href="/frontend/src/components/dashboard/templates/generate_protocol.html">Generate Protocol</a><br/>
+                                        <h3>Design Search Query</h3>
+                                            <a href="/frontend/src/components/dashboard/templates/select_databases.html">Select Databases</a><br/>
+                                          <a href="/frontend/src/components/dashboard/templates/create_query_form.html">Create Query Form</a><br/>
+                                          <a href="/frontend/src/components/dashboard/templates/create_query.html">Create Query</a><br/>
+                                           <a href="/frontend/src/components/dashboard/templates/translations.html">Translate Databases</a><br/>
+                                           <a href="/frontend/src/components/dashboard/templates/query_dashboard.html">Query Dashboard</a><br/>
+                                         <h3>Create Data Forms</h3>
+                                             <a href="/frontend/src/components/dashboard/templates/create_form.html">Create Data Form</a><br/>
+                                           <a href="/frontend/src/components/dashboard/templates/test_data_form.html">Test Data Form</a><br/>
+                                         <h3>Design Quality Assessment</h3>
+                                           <a href="/frontend/src/components/dashboard/templates/create_quality_assessment_form.html">Create Quality Assessment Form</a>`;
+                         break;
+                   case 'Conducting Review':
+                        sectionContent = `<h2>Conducting Review</h2>
+                                         <p>Conducting review content here.</p>
+                                        <h3>Title-Abstract Screening</h3>
+                                          <a href="/frontend/src/components/dashboard/templates/upload_studies.html">Upload Studies</a><br/>
+                                         <a href="/frontend/src/components/dashboard/templates/deduplicate_studies.html">De-deuplicate Studies</a><br/>
+                                          <a href="/frontend/src/components/dashboard/templates/screen_studies.html">Screen Studies</a><br/>
+                                        <a href="/frontend/src/components/dashboard/templates/resolve_conflicts.html">Resolve Conflicts</a><br/>
+                                       <h3>Full-Text Screening</h3>
+                                           <a href="/frontend/src/components/dashboard/templates/full_text_screening.html">Full-Text Screening</a><br/>
+                                        <h3>Data Extraction</h3>
+                                          <a href="/frontend/src/components/dashboard/templates/create_form.html">Create Extraction Form</a><br/>
+                                          <a href="/frontend/src/components/dashboard/templates/manage_studies.html">Manage Studies</a><br/>
+                                         <a href="/frontend/src/components/dashboard/templates/data_extraction.html">Data Extraction</a><br/>
+                                         <a href="/frontend/src/components/dashboard/templates/review_extracted_data.html">Review Extracted Data</a><br/>
+                                        <h3>Quality Assessment</h3>
+                                          <a href="/frontend/src/components/dashboard/templates/create_quality_assessment.html">Create Quality Assessment</a><br/>
+                                        <a href="/frontend/src/components/dashboard/templates/quality_assessment.html">Quality Assessment</a><br/>
+                                         <a href="/frontend/src/components/dashboard/templates/review_quality_assessment.html">Review Quality Assessment</a>`;
+                        break;
+                    case 'Reporting Review':
+                        sectionContent = `<h2>Reporting Review</h2>
+                                            <p>Reporting review content here.</p>
+                                            <h3>Visualize</h3>
+                                              <a href="/frontend/src/components/dashboard/templates/view_trends.html">Visualize Data</a><br/>
+                                          <a href="/frontend/src/components/dashboard/templates/view_charts.html">Figure Charts</a><br/>
+                                               <a href="/frontend/src/components/dashboard/templates/data_tables.html">Data Tables</a><br/>
+                                          <h3>Export</h3>
+                                             <a href="/frontend/src/components/dashboard/templates/prisma_diagram.html">PRISMA Diagram</a><br/>
+                                            <a href="/frontend/src/components/dashboard/templates/generate_prisma.html">Generate PRISMA</a><br/>
+                                             <a href="/frontend/src/components/dashboard/templates/generate_manuscript.html">Generate Manuscript</a><br/>`;
+                         break;
+                     case 'Settings':
+                        sectionContent = `<h2>Settings</h2>
+                                            <p>Settings content here.</p>`;
+                         break;
+                    case 'User Management':
+                          sectionContent = `<h2>User Management</h2>
+                                              <p>User management content here.</p>`;
+                          break;
+                      case 'User Registration':
+                          sectionContent = `<h2>User Registration</h2>
+                                               <p> User Registration content here.</p>`;
+                         break;
+                       case 'Role Management':
+                           sectionContent = `<h2>Role Management</h2>
+                                                <p> Role Management content here.</p>`;
+                            break;
+                     case 'Audit Logs':
+                         sectionContent = `<h2>Audit Logs</h2>
+                                            <p>Audit Logs content here.</p>`;
+                         break;
+                    case 'User Activity':
+                       sectionContent = `<h2>User Activity</h2>
+                                             <p>User Activity content here.</p>`;
+                       break;
+                   default:
+                       sectionContent = `<h2>Project Overview</h2><p>Default content here.</p>
+                                         <h3>Project History</h3>
+   
+             $('#submenuItems').html(sectionContent);
+         }
+            homePage();
+        });
+
+</script>
+
+</body>
+</html>
+
+
