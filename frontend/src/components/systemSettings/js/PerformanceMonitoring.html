@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Monitoring</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+/* PerformanceMonitoring.module.css */
+.monitoringContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+   border: 1px solid #ddd;
+    border-radius: 8px;
+      background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.monitoringContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.metricsDisplay {
+ padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.metricsDisplay p {
+  margin-bottom: 5px;
+}
+
+.metricsDisplay strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .monitoringContainer {
+    padding: 15px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+  <div class="monitoringContainer">
+    <h1>System Monitoring and Performance</h1>
+    <div id="metricsDisplay" class="metricsDisplay">
+      <p><strong>CPU Usage:</strong> <span id="cpuUsage"></span> %</p>
+      <p><strong>Memory Usage:</strong> <span id="memoryUsage"></span> MB</p>
+      <p><strong>Disk I/O:</strong> <span id="diskIO"></span> KB/s</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/PerformanceMonitoring.js"></script>
+</body>
+</html>

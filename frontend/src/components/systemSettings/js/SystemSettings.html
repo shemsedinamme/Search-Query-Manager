@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  /* SystemSettings.module.css */
+.settingsContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+   border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.settingsContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.settingItem {
+    margin-bottom: 10px;
+}
+.settingItem label{
+   display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
+.settingItem input[type="checkbox"] {
+  margin-right: 10px;
+}
+.settingsInput {
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+.settingsInput:focus{
+ border-color: MediumSeaGreen;
+}
+.saveButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.saveButton:hover {
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .settingsContainer {
+    padding: 15px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="settingsContainer">
+    <h1>System Configuration</h1>
+    <div class="settingItem">
+      <label>
+        Email Notifications:
+        <input type="checkbox" id="emailNotifications" />
+      </label>
+    </div>
+    <div class="settingItem">
+      <label>Default Settings</label>
+      <textarea id="defaultSettings" class="settingsInput"></textarea>
+    </div>
+    <div class="settingItem">
+      <label>Branding</label>
+      <input type="text" id="branding" class="settingsInput" />
+    </div>
+    <button id="saveSettingsButton" class="saveButton">Save Settings</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/SystemSettings.js"></script>
+</body>
+</html>
+
